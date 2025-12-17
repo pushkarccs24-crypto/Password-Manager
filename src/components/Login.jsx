@@ -1,15 +1,20 @@
 // LoginPage.jsx
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ email, password });
+    if (email && password) {
+      navigate("/dashboard");
+    }
   };
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900 p-4">
