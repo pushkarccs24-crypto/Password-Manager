@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      {/* Navbar */}
       <nav className="bg-gray-800 px-6 py-4 flex items-center justify-between shadow-md">
         <h1 className="text-xl font-semibold text-indigo-400">Password Manager</h1>
 
         <div className="space-x-6 text-sm">
-          <Link to="/login" className="hover:text-indigo-400 transition">Login</Link>
-          <Link to="/signup" className="hover:text-indigo-400 transition">Signup</Link>
+
           <Link to="/add-password" className="hover:text-indigo-400 transition">Add Password</Link>
           <Link to="/edit-password" className="hover:text-indigo-400 transition">Edit Password</Link>
+          <Link to="/signup" className="hover:text-indigo-400 transition">Signup</Link>
+          <Link to="/login" className="text-red-400 hover:text-red-300 hover:bg-red-500/10 px-3 py-1 rounded transition">Logout</Link>
         </div>
       </nav>
 
